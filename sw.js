@@ -1,9 +1,9 @@
-const C='cal-v2';
+const C='cal-v3';
 const F='https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap';
 self.addEventListener('install',e=>{
   e.waitUntil((async()=>{
     const c=await caches.open(C);
-    await c.addAll(['./','index.html','manifest.webmanifest','icon-192.png']);
+    await c.addAll(['./','index.html','manifest.webmanifest','icon-180.png','icon-192.png','icon-512.png']);
     try{
       const r=await fetch(F);
       await c.put(F,r.clone());
